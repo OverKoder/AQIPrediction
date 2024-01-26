@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-xxl position-relative p-0">
+      <nav class="navbar navbar-light bg-light">
+          <a href="" class="navbar-brand mb-0 h1">
+              <h1 class="text-primary m-0"></i>Air Quality Prediction</h1>
+          </a>
+          
+      </nav>
+
+
+</div>
+
+<div class="jumbotron {{ aqi_color }}">
+<h1 class="display-4">{{ display_aqi }}<br/><br/></h1>
+<p class="lead">Air Quality: <b>{{ aqi }}</b> / 500.</p>
+<p class="lead">Information: <b>{{ aqi_description }}</b><br/><br/></p>
+<p class="lead">Location: <b>{{ location }}</b></p>
+</div>
+
+
+<div class="container-xxl position-relative p-0">
+      <nav class="navbar navbar-light bg-light">
+          <a href="" class="navbar-brand mb-0 h1">
+              <h1 class="text-primary m-0"></i>Air Quality Today {{date}}</h1>
+          </a>
+          
+      </nav>
+
+
+</div>
+
+<div class="jumbotron {{ aqi_color }}">
+<h1 class="display-4">{{ display_aqi }}<br/><br/></h1>
+<p class="lead">Air Quality: <b>{{ aqi }}</b> / 500.</p>
+<p class="lead">Information: <b>{{ aqi_description }}</b><br/><br/></p>
+<p class="lead">Location: <b>{{ location }}</b></p>
+<p class="lead">Humidity: <b>{{ humidity }}</b></p>
+<p class="lead">NO2: <b>{{ no2 }} ug</b></p>
+<p class="lead">O3: <b>{{ o3 }} ug</b></p>
+<p class="lead">PM10: <b>{{ pm10 }}</b></p>
+<p class="lead">PM25: <b>{{ pm25 }}</b></p>
+<p class="lead">SO2: <b>{{ so2 }} ug</b></p>
+<p class="lead">Temperature: <b>{{ temperature }} ºC</b></p>
+
+</div>
+<div class="container-xxl position-relative p-0">
+      <nav class="navbar navbar-light bg-light">
+          <a href="" class="navbar-brand mb-0 h1">
+              <h1 class="text-primary m-0"></i>Past Predictions</h1>
+          </a>
+          
+      </nav>
+
+
+</div>
+  <!-- Navbar & Hero End -->
+  <!-- Service Start -->
+<div class="container-xxl py-5">
+      <div class="container">
+            <div class="row g-4">
+                  <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                              <i class="fa fa-cloud" style="font-size:36px"></i>
+                              <h5>{{past_day_1}}</h5>
+                              <p>Nothing here for now</p>
+                        </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                              <i class="fa fa-cloud" style="font-size:36px"></i>
+                              <h5>{{past_day_2}}</h5>
+                              <p>Nothing here for now</p>
+                        </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                              <i class="fa fa-cloud" style="font-size:36px"></i>
+                              <h5>{{past_day_3}}</h5>
+                              <p>Nothing here for now</p>
+                        </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                  <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                              <i class="fa fa-cloud" style="font-size:36px"></i>
+                              <h5>{{past_day_4}}</h5>
+                              <p>Nothing here for now</p>
+                        </div>
+                  </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+
+{% endblock %}

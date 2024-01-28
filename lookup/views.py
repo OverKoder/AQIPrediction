@@ -1,8 +1,9 @@
 import os
 import datetime
 
-from django.shortcuts import render
+from . import forecast as fcast
 import requests
+from django.shortcuts import render
 from dotenv import load_dotenv
 
 def home(request):
@@ -47,14 +48,17 @@ def home(request):
 		aqi_description = "Everyone is very likely to be affected. Outside activity is highly unrecommended"
 		aqi_color = "dangerous"
 
+	# Get forecast
+	models = fcast.load_models()
+	forecast = fcast.get_forecast(models)
+
 	today = datetime.datetime.now()
 	context = {
 		'today': today.strftime("%d/%m/%y"),
-		'tomorrow': (today + datetime.timedelta(1)).strftime("%d/%m/%y"),
-		'past_day_1': (today + datetime.timedelta(-1)).strftime("%d/%m/%y"),
-		'past_day_2': (today + datetime.timedelta(-2)).strftime("%d/%m/%y"),
-		'past_day_3': (today + datetime.timedelta(-3)).strftime("%d/%m/%y"),
-		'past_day_4': (today + datetime.timedelta(-4)).strftime("%d/%m/%y"),
+		'next_day_1': (today + datetime.timedelta(1)).strftime("%d/%m/%y"),
+		'next_day_2': (today + datetime.timedelta(2)).strftime("%d/%m/%y"),
+		'next_day_3': (today + datetime.timedelta(3)).strftime("%d/%m/%y"),
+		'next_day_4': (today + datetime.timedelta(4)).strftime("%d/%m/%y"),
 		'aqi': aqi,
 		'display_aqi': display_aqi, 
 		'location': "Valencia", 
@@ -69,6 +73,9 @@ def home(request):
 		'temperature': iaqi['t']['v'],
 	}
 	
+	# Join both dictionaries
+	context.update(forecast)
+
 	return render(request, 'home.html', context)
 
 

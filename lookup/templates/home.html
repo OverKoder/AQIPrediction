@@ -2,24 +2,6 @@
 
 {% block content %}
 
-<div class="container-xxl position-relative p-0">
-      <nav class="navbar navbar-light bg-light">
-          <a href="" class="navbar-brand mb-0 h1">
-              <h1 class="text-primary m-0"></i>Air Quality Prediction</h1>
-          </a>
-          
-      </nav>
-
-
-</div>
-
-<div class="jumbotron {{ aqi_color }}">
-<h1 class="display-4">{{ display_aqi }}<br/><br/></h1>
-<p class="lead">Air Quality: <b>{{ aqi }}</b> / 500.</p>
-<p class="lead">Information: <b>{{ aqi_description }}</b><br/><br/></p>
-<p class="lead">Location: <b>{{ location }}</b></p>
-</div>
-
 
 <div class="container-xxl position-relative p-0">
       <nav class="navbar navbar-light bg-light">
@@ -49,7 +31,7 @@
 <div class="container-xxl position-relative p-0">
       <nav class="navbar navbar-light bg-light">
           <a href="" class="navbar-brand mb-0 h1">
-              <h1 class="text-primary m-0"></i>Past Predictions</h1>
+              <h1 class="text-primary m-0"></i>Future Predictions</h1>
           </a>
           
       </nav>
@@ -65,8 +47,12 @@
                   <div class="service-item rounded pt-3">
                         <div class="p-4">
                               <i class="fa fa-cloud" style="font-size:36px"></i>
-                              <h5>{{past_day_1}}</h5>
-                              <p>Nothing here for now</p>
+                              <h5>{{next_day_1}}</h5>
+                              <p>Avg PM10: {{pm10_1}}</p>
+                              <p>Avg PM25 (AQI): {{pm25_1}}</p>
+                              <p>Avg O3: {{o3_1}} ug</p>
+                              <p>Avg NO2: {{no2_1}} ug</p>
+                              <p>Avg SO3: {{so2_1}} ug</p>
                         </div>
                   </div>
                   </div>
@@ -74,8 +60,12 @@
                   <div class="service-item rounded pt-3">
                         <div class="p-4">
                               <i class="fa fa-cloud" style="font-size:36px"></i>
-                              <h5>{{past_day_2}}</h5>
-                              <p>Nothing here for now</p>
+                              <h5>{{next_day_2}}</h5>
+                              <p>Avg PM10: {{pm10_2}}</p>
+                              <p>Avg PM25 (AQI): {{pm25_2}}</p>
+                              <p>Avg O3: {{o3_2}} ug</p>
+                              <p>Avg NO2: {{no2_2}} ug</p>
+                              <p>Avg SO3: {{so2_2}} ug</p>
                         </div>
                   </div>
                   </div>
@@ -83,8 +73,12 @@
                   <div class="service-item rounded pt-3">
                         <div class="p-4">
                               <i class="fa fa-cloud" style="font-size:36px"></i>
-                              <h5>{{past_day_3}}</h5>
-                              <p>Nothing here for now</p>
+                              <h5>{{next_day_3}}</h5>
+                              <p>Avg PM10: {{pm10_3}}</p>
+                              <p>Avg PM25 (AQI): {{pm25_3}}</p>
+                              <p>Avg O3: {{o3_3}} ug</p>
+                              <p>Avg NO2: {{no2_3}} ug</p>
+                              <p>Avg SO3: {{so2_3}} ug</p>
                         </div>
                   </div>
                   </div>
@@ -92,8 +86,12 @@
                   <div class="service-item rounded pt-3">
                         <div class="p-4">
                               <i class="fa fa-cloud" style="font-size:36px"></i>
-                              <h5>{{past_day_4}}</h5>
-                              <p>Nothing here for now</p>
+                              <h5>{{next_day_4}}</h5>
+                              <p>Avg PM10: {{pm10_4}}</p>
+                              <p>Avg PM25 (AQI): {{pm25_4}}</p>
+                              <p>Avg O3: {{o3_4}} ug</p>
+                              <p>Avg NO2: {{no2_4}} ug</p>
+                              <p>Avg SO3: {{so2_4}} ug</p>
                         </div>
                   </div>
                   </div>
